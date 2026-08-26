@@ -1,0 +1,4 @@
+Hostname: lockin
+Operating System: PRETTY_NAME="Ubuntu 22.04.5 LTS"
+Kernel: 5.15.0-190-generic
+IP Address: 10.0.2.15 fd17:625c:f037:2:dc:5fff:fe02:c88d 
