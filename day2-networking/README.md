@@ -191,6 +191,33 @@ echo $?
 
 An exit status of `0` confirms that Bash found no syntax errors.
 
+## Evidence
+
+### Automated Network Diagnostic
+
+The completed script confirmed successful interface configuration, gateway connectivity, internet access, DNS resolution, remote TCP connectivity, and local Nginx availability.
+
+![Completed network diagnostic report](evidence/01-network-diagnostic-pass.png)
+
+### Loopback-Only Socket Binding
+
+During the controlled incident, Nginx listened only on the IPv4 and IPv6 loopback interfaces.
+
+![Nginx bound to loopback sockets](evidence/02-loopback-binding.png)
+
+### Connection Failure
+
+Nginx returned `200 OK` through `127.0.0.1`, while the connection through `10.0.2.15` was refused.
+
+![Local success and network-interface failure](evidence/03-connection-failure.png)
+
+### Restored Connectivity
+
+After restoring the wildcard bindings, Nginx listened on all interfaces and returned `200 OK` through both addresses.
+
+![Restored Nginx connectivity](evidence/04-restored-connectivity.png)
+
+
 ## Key Lessons
 
 - A running service is not necessarily accessible through the network.
