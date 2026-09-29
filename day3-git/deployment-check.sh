@@ -5,7 +5,7 @@ URL="${1:-http://localhost}"
 echo "=== Deployment Validation ==="
 echo "Checking: $URL"
 
-HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+HTTP_STATUS=$(curl -s --max-time 10 -o /dev/null -w "%{http_code}" "$URL")
 CURL_EXIT=$?
 
 if [ "$CURL_EXIT" -ne 0 ]; then
