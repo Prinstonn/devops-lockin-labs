@@ -1,0 +1,12 @@
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# Editor backup files
+*.save
+
+# Temporary files
+*.tmp
