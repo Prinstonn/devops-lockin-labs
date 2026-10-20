@@ -10,3 +10,6 @@
 
 # Temporary files
 *.tmp
+
+# Day 4 generated log files
+day4-bash/*.log
