@@ -1,0 +1,25 @@
+name: Day 5 -   Bash CI Pipeline
+
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+  health-check:
+    name: Validate and Run Bash Script
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate Bash Syntax
+        run: bash -n day5-cicd/health-check.sh
+
+      - name: Execute health check
+        run: bash day5-cicd/health-check.sh

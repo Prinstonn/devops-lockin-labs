@@ -1,0 +1,14 @@
+project:
+  name: Devops Lock-In
+  day: 5
+  topic: CI/CD Fundamentals
+environment:
+  operating_system: Ubuntu
+  shell:
+  - Bash
+  - Git
+  - Bash
+  - Github Actions
+automation:
+  enabled: true
+  trigger: push
