@@ -22,4 +22,4 @@ df -h /
 echo "Memory usage:"
 free -h
 
-echo "Health check finished!"
+echo "Health check completed successfully!"
